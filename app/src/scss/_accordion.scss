@@ -1,0 +1,52 @@
+@mixin acardion_text($size, $weight, $height, $family, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  font-family: $family;
+  color: $color;
+}
+.acardion {
+  .item {
+    border-bottom: 1px solid #e4e4e4ff;
+    margin-bottom: 3%;
+
+    .title {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      span {
+        font-size: 26px;
+        color: $infoiconcol;
+      }
+      h5 {
+        @include acardion_text(
+          24px,
+          500,
+          28.8px,
+          $cardmoduletextbody,
+          $font-general
+        );
+      }
+    }
+    .content {
+      overflow: hidden;
+      max-height: 0;
+      transition-duration: 0.5s;
+      transition-delay: 0s;
+      transition-timing-function: ease;
+      p {
+        @include acardion_text(
+          16px,
+          400,
+          24px,
+          $font-jakarta-plus,
+          $card_module_info
+        );
+      }
+    }
+
+    .show {
+      max-height: 9999px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@mixin how_begin_text($size, $weight, $height, $family, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  font-family: $family;
+  color: $color;
+}
+.howto_begin_main {
+  padding: 100px 124px 100px 124px !important;
+  .col-md-12 {
+    h2 {
+      @include how_begin_text(
+        52px,
+        bold,
+        57.2px,
+        $font-general,
+        $cardmoduletextbody
+      );
+      margin-bottom: 4%;
+    }
+    .col-md-8 {
+      p {
+        @include how_begin_text(
+          18px,
+          400,
+          24.3px,
+          $font-jakarta-plus,
+          $infocolor
+        );
+      }
+      margin-bottom: 8%;
+    }
+    .col-md-4 {
+      button {
+        @include how_begin_text(16px, 600, 24px, $font-jakarta-plus, $white);
+        text-align: center;
+        padding: 16px 32px 16px 32px;
+        border: none;
+        cursor: pointer;
+        background-color: $card_module_icon_color;
+        border-radius: 1000px;
+        margin-left: 42%;
+      }
+    }
+    .col-md-6 {
+      .howtobeginimg {
+        width: 93%;
+        height: 310px;
+        background-image: url(../images/da7722ef-1b5e-4c4d-b3e1-1b9e1e9fe3fc.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 16px;
+      }
+    }
+  }
+}
